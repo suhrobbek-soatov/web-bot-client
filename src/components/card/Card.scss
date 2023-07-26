@@ -45,6 +45,8 @@
 .card__image-wrapper {
   position: relative;
   user-select: none;
+  display: flex;
+  margin-bottom: 12px;
 
   &::before {
     content: "";
@@ -52,6 +54,10 @@
     position: absolute;
     inset: 0;
     z-index: 10;
+  }
+
+  @media only screen and (max-width: 600px) {
+    margin-bottom: 6px;
   }
 }
 
@@ -67,16 +73,35 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 14px;
 }
 
 .card__title {
+  margin: 0;
   font-weight: 400;
   font-size: 24px;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .card__price {
+  margin-top: 0;
   font-size: 24px;
   font-weight: bold;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 22px;
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 20px;
+  }
 }
 
 .card__divider {

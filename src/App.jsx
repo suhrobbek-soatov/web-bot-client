@@ -45,7 +45,7 @@ const App = () => {
 
     if (queryId)
       fetch("https://localhost:5000", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cartItems) });
-    else telegram.sendData(JSON.stringify(cartItems));
+    else telegram.sendData(JSON.stringify({ courses: cartItems, queryId }));
   }, [cartItems]);
 
   useEffect(() => {

@@ -42,7 +42,7 @@ const App = () => {
   };
 
   const onSendData = useCallback(() => {
-    const queryId = telegram.initDataUnSave?.query_id;
+    const queryId = telegram.initDataUnSafe?.query_id;
 
     if (queryId) axios.post("https://sbk-web-bot-cda1b4aa5518.herokuapp.com/web-bot", { courses: cartItems, queryId });
     else telegram.sendData(JSON.stringify(cartItems));

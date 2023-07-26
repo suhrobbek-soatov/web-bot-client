@@ -37,7 +37,8 @@ const App = () => {
 
   const onCheckout = () => {
     telegram.MainButton.text = "Sotib olish";
-    telegram.MainButton.show();
+    if (!!cartItems.length) telegram.MainButton.show();
+    else telegram.MainButton.hide();
   };
 
   return (

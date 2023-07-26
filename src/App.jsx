@@ -42,7 +42,7 @@ const App = () => {
   };
 
   const onSendData = useCallback(() => {
-    const queryId = telegram.initDataUnSafe?.query_id;
+    const queryId = telegram.initDataUnsafe?.query_id;
 
     if (queryId) {
       fetch("https://sbk-web-bot-cda1b4aa5518.herokuapp.com/web-bot", {

@@ -44,8 +44,18 @@ const App = () => {
   const onSendData = useCallback(() => {
     const queryId = telegram.initDataUnSafe?.query_id;
 
-    if (queryId) axios.post("https://sbk-web-bot-cda1b4aa5518.herokuapp.com/web-bot", { courses: cartItems, queryId });
-    else telegram.sendData(JSON.stringify(cartItems));
+    if (queryId) {
+      fetch("https://sbk-web-bot-cda1b4aa5518.herokuapp.com/web-bot", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          courses: cartItems,
+          queryId: queryId,
+        }),
+      });
+    } else telegram.sendData(JSON.stringify(cartItems));
   }, [cartItems]);
 
   useEffect(() => {

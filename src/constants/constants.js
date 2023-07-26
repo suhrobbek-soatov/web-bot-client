@@ -1,0 +1,1 @@
+export const priceOptions = { style: "currency", currency: "usd" };

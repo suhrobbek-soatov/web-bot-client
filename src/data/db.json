@@ -1,0 +1,56 @@
+[
+  {
+    "title": "JavaScript",
+    "price": 17.99,
+    "image": "/images/js.jpg",
+    "id": 1
+  },
+  {
+    "title": "ReactJS",
+    "price": 15,
+    "image": "/images/react.jpg",
+    "id": 2
+  },
+  {
+    "title": "VueJS",
+    "price": 13.5,
+    "image": "/images/vue.jpg",
+    "id": 3
+  },
+  {
+    "title": "NodeJS",
+    "price": 13.99,
+    "image": "/images/nodejs.jpg",
+    "id": 4
+  },
+  {
+    "title": "NestJS",
+    "price": 12.5,
+    "image": "/images/nestjs.jpg",
+    "id": 5
+  },
+  {
+    "title": "NextJS",
+    "price": 12.99,
+    "image": "/images/nextjs.jpg",
+    "id": 6
+  },
+  {
+    "title": "TypeScript",
+    "price": 22.99,
+    "image": "/images/ts.jpg",
+    "id": 7
+  },
+  {
+    "title": "TensorflowJS",
+    "price": 28.99,
+    "image": "/images/tensorflow.jpg",
+    "id": 8
+  },
+  {
+    "title": "AngularJS",
+    "price": 16.59,
+    "image": "/images/angular.jpg",
+    "id": 9
+  }
+]

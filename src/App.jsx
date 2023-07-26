@@ -1,9 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Card, Cart } from "./components";
 import courses from "./data/db.json";
 
+const telegram = window.Telegram.WebApp;
+
 const App = () => {
   const [cartItems, setCartItems] = useState([]);
+
+  useEffect(() => {
+    telegram.ready();
+  }, []);
 
   const onAddItem = item => {
     const existItem = cartItems.find(c => c.id === item.id);

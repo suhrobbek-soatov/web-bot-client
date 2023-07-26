@@ -61,5 +61,14 @@
     &:active {
       background-color: #165f34;
     }
+
+    @media only screen and (max-width: 600px) {
+      font-size: 14px;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    font-size: 17px;
+    padding: 12px 9px;
   }
 }

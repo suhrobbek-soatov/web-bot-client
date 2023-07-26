@@ -3,8 +3,19 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
+  margin-bottom: 32px;
 
-  &:not(:last-child) {
-    margin-bottom: 32px;
+  @media only screen and (max-width: 600px) {
+    flex-direction: column;
+    margin-bottom: 22px;
+  }
+}
+
+.cart__text {
+  font-size: 16px;
+  margin: 0;
+
+  @media only screen and (max-width: 600px) {
+    font-size: 15px;
   }
 }

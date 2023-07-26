@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from "react";
 import { Card, Cart } from "./components";
 import courses from "./data/db.json";
+import axios from "axios";
 
 const telegram = window.Telegram.WebApp;
 
@@ -43,9 +44,8 @@ const App = () => {
   const onSendData = useCallback(() => {
     const queryId = telegram.initDataUnSave?.query_id;
 
-    if (queryId)
-      fetch("https://localhost:5000", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(cartItems) });
-    else telegram.sendData(JSON.stringify({ courses: cartItems, queryId }));
+    if (queryId) axios.post("https://sbk-web-bot-c7d8c058770d.herokuapp.com/", { courses: cartItems, queryId });
+    else telegram.sendData(JSON.stringify(cartItems));
   }, [cartItems]);
 
   useEffect(() => {

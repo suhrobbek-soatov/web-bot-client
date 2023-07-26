@@ -55,7 +55,9 @@ const App = () => {
           queryId: queryId,
         }),
       });
-    } else telegram.sendData(JSON.stringify(cartItems));
+    } else {
+      telegram.sendData(JSON.stringify(cartItems));
+    }
   }, [cartItems]);
 
   useEffect(() => {

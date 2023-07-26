@@ -35,10 +35,15 @@ const App = () => {
     }
   };
 
+  const onCheckout = () => {
+    telegram.MainButton.text = "Sotib olish";
+    telegram.MainButton.show();
+  };
+
   return (
     <main className="main-content">
       <h1 className="heading">WebEdu Kurslar</h1>
-      <Cart cartItems={cartItems} />
+      <Cart cartItems={cartItems} onCheckout={onCheckout} />
       <div className="cards container">
         {courses.map(course => (
           <Card key={course.id} onAddItem={onAddItem} onRemoveItem={onRemoveItem} course={course} />

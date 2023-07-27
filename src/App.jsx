@@ -1,7 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import { Card, Cart } from "./components";
 import courses from "./data/db.json";
-import axios from "axios";
 
 const telegram = window.Telegram.WebApp;
 
